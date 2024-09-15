@@ -1,0 +1,1 @@
+# EKS_MINIO_HA
