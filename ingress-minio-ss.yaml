@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minio-ingress
+  namespace: minio
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: "console.minio.boxoffice.guru"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myminio-console
+            port:
+              number: 9090
+  - host: "minio.boxoffice.guru"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myminio-hl
+            port:
+              number: 9000
+  tls:
+  - hosts:
+    - minio.boxoffice.guru
+    secretName: minio-tls
+  - hosts:
+    - console.minio.boxoffice.guru
+    secretName: console-minio-tls

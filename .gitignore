@@ -1,0 +1,7 @@
+IaC/
+console.minio-tls.crt
+console.minio-tls.key
+longhorn-tls.crt
+longhorn-tls.key
+minio-tls.crt
+minio-tls.key
