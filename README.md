@@ -1,4 +1,3 @@
-```markdown
 # EKS_MINIO_HA
 
 TODO: Automate infrastructure creation using IaC.
@@ -168,4 +167,3 @@ TODO: Automate infrastructure creation using IaC.
     ```
 
     ![minio-console](./images/minio-console.png)
-```
