@@ -167,3 +167,11 @@ TODO: Automate infrastructure creation using IaC.
     ```
 
     ![minio-console](./images/minio-console.png)
+
+
+22. **Cleanup:**
+
+    ```bash
+    kubectl delete svc nginx-ingress-ingress-nginx-controller -n ingress-nginx
+    eksctl delete cluster --name minio-cluster
+    ```
