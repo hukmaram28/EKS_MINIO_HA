@@ -1,6 +1,6 @@
 # EKS_MINIO_HA
 
-TODO: Automate infrastructure creation using IaC.
+TODO: Automate infrastructure creation using Terraform/CloudFormation.
 
 1. **Create EKS cluster using the following command:**
 
